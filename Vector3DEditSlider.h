@@ -1,0 +1,26 @@
+#pragma once
+
+#include <FloatSlider.h>
+#include <Vector3DEdit.h>
+
+class Vector3DEditSlider : public Vector3DEdit
+{
+	Q_OBJECT
+
+public:
+
+	Vector3DEditSlider(QWidget* parent = 0);
+	Vector3DEditSlider(QString title,
+		Qt::Orientation orientation,
+		QString label0, QString label1, QString label2,
+		float minimum, float maximum, int decimals,
+		QWidget* parent = 0);
+
+
+private:
+	
+
+
+
+
+};
