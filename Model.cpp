@@ -155,6 +155,7 @@ float Model::mass() const
 	return totalMass;
 }
 
+//将子面片都合并
 Mesh * Model::assemble() const
 {
 	Mesh* assembledMesh = 0;

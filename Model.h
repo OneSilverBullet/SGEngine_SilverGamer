@@ -18,6 +18,9 @@ public:
 	bool removeChildMesh(QObject* mesh, bool recursives);
 	bool removeChildModel(QObject* model, bool recursive);
 
+	virtual void dumpObjectInfo(int level = 0) override;
+	virtual void dumpObjectTree(int level = 0) override;
+
 	bool isGizmo() const override;
 	bool isLight() const override;
 	bool isMesh() const override;

@@ -59,7 +59,7 @@ protected:
 	QVector<uint32_t> m_indices;
 	Material* m_material;
 
-
+	friend class ModelLoader;
 };
 
 QDataStream& operator>>(QDataStream& in, Mesh::MeshType& meshType);

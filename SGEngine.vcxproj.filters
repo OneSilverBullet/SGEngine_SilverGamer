@@ -52,6 +52,81 @@
     <ClCompile Include="Texture.cpp">
       <Filter>Generated Files</Filter>
     </ClCompile>
+    <ClCompile Include="Model.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FloatEdit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3DEdit.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FloatSlider.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Vector3DEditSlider.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaterialProperty.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MeshProperty.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractGizmo.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractLight.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AmbientLight.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AmbientLightProperty.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelProperty.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gridline.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GridLineProperty.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionLight.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DirectionLightProperty.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SpotLight.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLUniformBufferObject.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLTexture.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGLMaterial.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ScaleGizmo.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelLoader.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TranslateGizmo.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RotateGizmo.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="mainwindow.h">
@@ -68,6 +143,81 @@
     </QtMoc>
     <QtMoc Include="Material.h">
       <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Mesh.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Model.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FloatEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Vector3DEdit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Vector3DEditSlider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FloatSlider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MaterialProperty.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="MeshProperty.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AbstractGizmo.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AbstractLight.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AmbientLight.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AmbientLightProperty.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ModelProperty.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Camera.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="Gridline.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="GridLineProperty.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DirectionLight.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DirectionLightProperty.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="SpotLight.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="OpenGLTexture.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="OpenGLMaterial.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="ScaleGizmo.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="PointLight.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="TranslateGizmo.h">
+      <Filter>Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RotateGizmo.h">
+      <Filter>Generated Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
@@ -93,8 +243,26 @@
     <ClInclude Include="extmath.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Mesh.h">
+    <ClInclude Include="Vertex.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QOpenGLRenderer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ModelLoader.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGLScene.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureLoader.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TransformGizmo.h">
+      <Filter>Generated Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

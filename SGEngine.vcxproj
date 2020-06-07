@@ -78,7 +78,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;release;\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;release;\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories);E:\SGEngine\SGEngine\3rdparty</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>release\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -97,7 +97,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenGL32.lib;.\lib\win\assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -133,7 +133,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;debug;\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>3rdparty;.\GeneratedFiles\$(ConfigurationName);.\GeneratedFiles;.;$(QTDIR)\include;debug;\include;$(QTDIR)\mkspecs\win32-msvc;%(AdditionalIncludeDirectories);E:\SGEngine\SGEngine\3rdparty</AdditionalIncludeDirectories>
       <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -w34100 -w34189 -w44996 -w44456 -w44457 -w44458 %(AdditionalOptions)</AdditionalOptions>
       <AssemblerListingLocation>debug\</AssemblerListingLocation>
       <BrowseInformation>false</BrowseInformation>
@@ -152,7 +152,7 @@
       <ProgramDataBaseFileName>$(IntDir)vc$(PlatformToolsetVersion).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenGL32.lib;.\lib\win\assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
       <DataExecutionPrevention>true</DataExecutionPrevention>
@@ -187,10 +187,35 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="AbstractEntity.cpp" />
+    <ClCompile Include="AbstractGizmo.cpp" />
+    <ClCompile Include="AbstractLight.cpp" />
+    <ClCompile Include="AmbientLight.cpp" />
+    <ClCompile Include="AmbientLightProperty.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="DirectionLight.cpp" />
+    <ClCompile Include="DirectionLightProperty.cpp" />
     <ClCompile Include="extmath.cpp" />
+    <ClCompile Include="FloatEdit.cpp" />
+    <ClCompile Include="FloatSlider.cpp" />
+    <ClCompile Include="Gridline.cpp" />
+    <ClCompile Include="GridLineProperty.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="MaterialProperty.cpp" />
+    <ClCompile Include="MeshProperty.cpp" />
+    <ClCompile Include="Model.cpp" />
+    <ClCompile Include="ModelLoader.cpp" />
+    <ClCompile Include="ModelProperty.cpp" />
+    <ClCompile Include="OpenGLMaterial.cpp" />
+    <ClCompile Include="OpenGLTexture.cpp" />
+    <ClCompile Include="OpenGLUniformBufferObject.cpp" />
+    <ClCompile Include="RotateGizmo.cpp" />
+    <ClCompile Include="ScaleGizmo.cpp" />
+    <ClCompile Include="SpotLight.cpp" />
     <ClCompile Include="Texture.cpp" />
+    <ClCompile Include="TranslateGizmo.cpp" />
+    <ClCompile Include="Vector3DEdit.cpp" />
+    <ClCompile Include="Vector3DEditSlider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="mainwindow.h">
@@ -219,12 +244,43 @@
     </QtUic>
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="Camera.h" />
+    <QtMoc Include="Gridline.h" />
+    <QtMoc Include="GridLineProperty.h" />
+    <QtMoc Include="DirectionLight.h" />
+    <QtMoc Include="DirectionLightProperty.h" />
+    <QtMoc Include="SpotLight.h" />
+    <QtMoc Include="OpenGLTexture.h" />
+    <QtMoc Include="OpenGLMaterial.h" />
+    <ClInclude Include="ModelLoader.h" />
+    <ClInclude Include="OpenGLScene.h" />
+    <QtMoc Include="PointLight.h" />
+    <ClInclude Include="QOpenGLRenderer.h" />
+    <QtMoc Include="ScaleGizmo.h" />
+    <QtMoc Include="RotateGizmo.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="TextureLoader.h" />
+    <ClInclude Include="TransformGizmo.h" />
+    <QtMoc Include="TranslateGizmo.h" />
+    <ClInclude Include="Vertex.h" />
+    <QtMoc Include="Vector3DEditSlider.h" />
+    <QtMoc Include="FloatEdit.h" />
+    <QtMoc Include="Vector3DEdit.h" />
     <QtMoc Include="Texture.h" />
     <QtMoc Include="AbstractEntity.h" />
+    <QtMoc Include="AbstractGizmo.h" />
+    <QtMoc Include="AbstractLight.h" />
+    <QtMoc Include="AmbientLight.h" />
+    <QtMoc Include="AmbientLightProperty.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="extmath.h" />
     <QtMoc Include="Material.h" />
-    <ClInclude Include="Mesh.h" />
+    <QtMoc Include="Mesh.h" />
+    <QtMoc Include="Model.h" />
+    <QtMoc Include="FloatSlider.h" />
+    <QtMoc Include="MaterialProperty.h" />
+    <QtMoc Include="MeshProperty.h" />
+    <QtMoc Include="ModelProperty.h" />
     <ClInclude Include="OpenGLUniformBufferObject.h" />
     <QtMoc Include="SceneTreeWidge.h" />
   </ItemGroup>

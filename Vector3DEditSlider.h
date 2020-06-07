@@ -3,12 +3,12 @@
 #include <FloatSlider.h>
 #include <Vector3DEdit.h>
 
+
 class Vector3DEditSlider : public Vector3DEdit
 {
 	Q_OBJECT
 
 public:
-
 	Vector3DEditSlider(QWidget* parent = 0);
 	Vector3DEditSlider(QString title,
 		Qt::Orientation orientation,
@@ -18,9 +18,11 @@ public:
 
 
 private:
-	
+	FloatSlider* m_floatSlider[3];
 
+	void configLayout(Qt::Orientation orientation) override;
+	void configSignals() override;
 
-
-
+private slots:
+	void floatSliderValueSlided(float value);
 };

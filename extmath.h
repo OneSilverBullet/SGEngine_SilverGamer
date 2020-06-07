@@ -30,3 +30,19 @@ struct Plane
 	QVector3D v, n;
 };
 
+Line operator*(const QMatrix4x4& m, const Line& l);
+
+/*
+得到线与片段的交点
+L = st + dir * t
+*/
+QVector3D getIntersectionOfLinePlane(Line l, Plane p);
+
+//得到l1和l2点之间的最近点
+//L1 = st1 + dir1 * t1
+//L2 = st2 + dir2 * t2
+QVector3D getClosestPointOfLines(Line l1, Line l2);
+
+//Screen Space 2 world Space
+Line screenPosToWorldRay(QVector2D cursorPos, QVector2D windowSize,
+	QMatrix4x4 proj, QMatrix4x4 view);
